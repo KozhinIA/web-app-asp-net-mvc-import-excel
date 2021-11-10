@@ -22,7 +22,7 @@ namespace WebAppAspNetMvcImportExcel.Controllers
         public ActionResult Import(ImportAuthorViewModel model)
         {
             if (!ModelState.IsValid)
-                return View(model);
+                return View("Index", model);
 
             var log = ProceedImport(model);
 
