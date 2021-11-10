@@ -1,0 +1,13 @@
+﻿@using WebAppAspNetMvcImportExcel.Models
+@model ImportAuthorViewModel
+
+<h3>Импорт авторов</h3>
+
+@using (Html.BeginForm("Import", "ImportAuthors", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+    @Html.EditorForModel()
+
+    @Html.ActionLink("Пример файла", "GetExample",null, new { @class = "btn btn-info" })   
+    <input type="submit" value="Сохранить" class="btn btn-primary" />
+}
+
